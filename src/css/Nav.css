@@ -1,0 +1,58 @@
+/* General styling for the header */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* This pushes the logo and nav to opposite ends */
+    align-items: center; /* This vertically centers the items */
+    padding: 1rem 2rem; /* Adds some spacing around the navbar */
+    background-color: #ffffff; /* Sets a white background */
+    border-bottom: 1px solid #eaeaea; /* Optional: adds a subtle line at the bottom */
+  }
+  
+  /* Styling for the logo and title container */
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Making the logo smaller */
+  .logo {
+    width: 60px; /* You can adjust this value to make the logo bigger or smaller */
+    height: auto; /* Maintains the aspect ratio */
+    margin-right: 15px; /* Adds space between the logo and the title */
+  }
+  
+  /* Styling for the site title */
+  .navbar-brand h1 {
+    font-size: 1.25rem; /* Adjust font size as needed */
+    color: #004d00; /* A dark green color to match the logo */
+    margin: 0;
+  }
+  
+  /* Styling for the navigation links */
+  #main-nav ul {
+    list-style: none; /* Removes the default bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Makes the list items appear in a row */
+  }
+  
+  #main-nav li {
+    margin-left: 20px; /* Adds space between the navigation links */
+  }
+  
+  #main-nav a {
+    text-decoration: none; /* Removes the underline from links */
+    color: #333; /* Sets the text color for the links */
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+  }
+  
+  #main-nav a:hover {
+    color: #004d00; /* Changes the link color on hover */
+  }
+  
+  /* Hide the mobile menu button on larger screens for now */
+  .mobile-menu-btn {
+    display: none;
+  }
