@@ -1,17 +1,28 @@
-import './css/App.css'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './pages/Home'
+import React from 'react';
+// 1. Import the Outlet component
+import { Outlet } from 'react-router-dom';
+
+// 2. Import your persistent components like Nav and Footer
+import Nav from './components/Nav';
 import Footer from './components/Footer';
-
-
+import './css/App.css';
 
 function App() {
   return (
-    <Router>
-    <Home />;
-    <Footer />
-    </Router>
-  )
+    <div className="App">
+      {/* Nav will now appear on every page */}
+      <Nav />
+
+      {/* This is the placeholder for your page content */}
+      <main>
+        {/* 3. The Outlet will render <Home />, <About />, etc. based on the URL */}
+        <Outlet />
+      </main>
+
+      {/* Footer will also appear on every page */}
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;

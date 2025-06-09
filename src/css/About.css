@@ -1,0 +1,91 @@
+.page-banner {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Increased height */
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-text{
+    color: white;
+    size: 200px;
+}
+
+.banner-image {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0;
+}
+
+.banner-overlay {
+    width: 100%;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-size: 40px;;
+}
+
+.about-intro, .mission-vision, .values, .team {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.about-intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.about-content, .about-image {
+    flex: 1 1 500px;
+    padding: 20px;
+}
+
+.mission-vision {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--light-color);
+    padding: 50px 20px;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+
+.mission, .vision {
+    flex: 1 1 400px;
+    padding: 30px;
+    text-align: center;
+}
+
+.mission i, .vision i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.centering {
+    margin-bottom: 40px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}

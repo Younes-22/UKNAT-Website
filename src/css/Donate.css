@@ -1,0 +1,38 @@
+/* Donation Page Styles */
+.donation-intro, .donation-options, .current-campaigns, .donation-form-section, .donation-impact {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.donation-intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.option-box {
+    flex: 1 1 300px;
+    max-width: 350px;
+    margin: 15px;
+    padding: 30px;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.option-box:hover {
+    transform: translateY(-10px);
+}
+
+.option-box i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
