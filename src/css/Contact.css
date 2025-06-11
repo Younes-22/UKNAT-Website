@@ -1,0 +1,83 @@
+/* This remains the same, it centers the container on the page */
+.contact-container {
+    max-width: var(--max-width);
+    margin: 40px auto; /* Added top/bottom margin for spacing */
+    display: flex; /* Helps center the card if max-width is smaller */
+    justify-content: center;
+}
+
+/* 1. Create the main card style */
+.contact-info {
+    background-color: #fff;
+    padding: 2rem 3rem; /* Add generous padding inside the card */
+    border-radius: 15px; /* Create the rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Add a soft shadow */
+    max-width: 500px; /* Give the card a maximum width */
+    width: 100%;
+    text-align: center; /* Center all the text inside */
+}
+
+.contact-info h3 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+/* 2. Style the individual contact item rows (Phone, Email) */
+.info-item {
+    display: flex; /* Place icon and text side-by-side */
+    align-items: center; /* Vertically center them */
+    text-align: left; /* Align the text to the left within its block */
+    gap: 20px; /* Create space between the icon and text */
+    margin-bottom: 1.5rem;
+}
+
+/* 3. Style the icons within those rows */
+.info-icon {
+    font-size: 1.7rem;
+    color: var(--primary-color); /* Use your theme's primary color */
+}
+
+.info-item h4 {
+    margin: 0 0 5px 0; /* Adjust margin */
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.info-item p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.info-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+/* 4. Style the "Connect With Us" section */
+.social-media {
+    margin-top: 2rem;
+}
+
+.social-media h3 {
+    margin-bottom: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    gap: 25px; /* Space out the icons */
+}
+
+.social-icons a {
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+/* Add a little hover effect for the social icons */
+.social-icons a:hover {
+    transform: scale(1.1);
+}
