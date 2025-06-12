@@ -12,10 +12,12 @@ function Volunteer(){
         email: '',
         phone: '',
         location: '',
-        availability: '',
+        availability: 'Weekdays',
         interests: {events: false, skills: false, digital: false, fundraising: false},
         message: ''
-    })
+    });
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     // this function handles all the inputs
     const handleChange = (e) => {
@@ -40,8 +42,37 @@ function Volunteer(){
     const handleSubmit= (e) => {
             //this prevents the page from reloading
             e.preventDefault();
-            console.log("submitted the following data: ", formData);
-        };
+            // console.log("submitted the following data: ", formData);
+            setIsSubmitting(true);
+
+            const url = 'https://sheetdb.io/api/v1/idxxty0qg47kt';
+
+            fetch(url, {
+              method: 'POST',
+              headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(formData)
+            })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data); // The success response from SheetDB
+            alert("Thank you for your application! We will be in touch soon.");
+            setIsSubmitting(false); // Re-enable button
+            // Optional: Reset the form after successful submission
+            setFormData({
+                name: '', email: '', phone: '', location: '', availability: 'weekdays',
+                interests: { events: false, skills: false, digital: false, fundraising: false },
+                message: ''
+            });
+        })
+        .catch((error) => {
+            console.error(error);
+            alert("Sorry, there was an error submitting your form. Please try again.");
+            setIsSubmitting(false); // Re-enable button on error too
+        });
+    };
 
     return(
         <>
@@ -151,7 +182,9 @@ function Volunteer(){
             ></textarea>
         </div>
         <div className="form-group">
-            <button type="submit" className="btn">Button</button>
+            <button type="submit" className="btn" disabled={isSubmitting}>
+                {isSubmitting ? 'Submitting...' : 'Submit Application'}
+              </button>
             </div>
       </form>
     </section>
