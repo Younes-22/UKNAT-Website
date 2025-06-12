@@ -13,10 +13,12 @@ function About(){
         </div>
     </section>
     <section className="about-intro">
-        <div className="about-content">
+        <div className="centering">
             <h2>Our Story</h2>
-            <p>Hope Foundation was established in 2005 with a simple mission: to bring hope and support to communities in need around the world. What started as a small group of dedicated volunteers has grown into an international organization with a presence in 25 countries.</p>
-            <p>Our journey began when our founder, Jane Smith, witnessed the devastating effects of poverty during her travels. Determined to make a difference, she gathered a team of like-minded individuals who shared her passion for helping others.</p>
+            <p>The UK North African Trust is a charitable organization founded in 2016 to support and empower the North African community and beyond in the UK. The Trust organizes a wide range of cultural, religious, educational, and charitable events and activities, fostering unity and personal development. 
+                It extends its impact by supporting charitable causes both in the UK and North Africa, addressing key social needs. With a strong focus on youth engagement, the Trust provides young people with opportunities through cultural, educational, entertainment, and sports activities, helping them thrive in society.</p>
+            <p>Additionally, the Trust is committed to environmental protection and promoting a healthy lifestyle, 
+                contributing to a sustainable future for all. Through its diverse initiatives, the UK North African Trust continues to make a meaningful difference in the lives of individuals and communities.</p>
         </div>
     </section>
 
