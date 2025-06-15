@@ -25,3 +25,6 @@ dist-ssr
 
 # ignore all video files
 echo "*.mp4" >> .gitignore
+
+
+.env
