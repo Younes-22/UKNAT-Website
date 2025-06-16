@@ -9,6 +9,7 @@ import './css/App.css';
 
 function App() {
   return (
+    <>
     <div className="App">
       {/* Nav will now appear on every page */}
       <Nav />
@@ -18,11 +19,11 @@ function App() {
         {/* 3. The Outlet will render <Home />, <About />, etc. based on the URL */}
         <Outlet />
       </main>
-
-      {/* Footer will also appear on every page */}
-      <Footer />
     </div>
+    <Footer />
+    </>
   );
+  
 }
 
 export default App;

@@ -1,54 +1,111 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import '../css/Nav.css'; // We'll create this CSS file next
-import logo from '../images/logo.jpg'; // Import the logo image
+import '../css/Nav.css'; // Your CSS file
+import logo from '../images/logo.jpg'; // Your logo image
 
 function Nav() {
-
     const [showNav, setShowNav] = useState(true);
-    const [lastScrollY, setLastScrollY] = useState(0);
+    // lastScrollY is still needed to detect scroll direction
+    const [lastScrollY, setLastScrollY] = useState(0); 
+    const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-    const controlNavbar = () =>{
-        //if the user scrolls down, hide the navbar
-        if (window.scrollY > lastScrollY){
-            setShowNav(false);
-        } else { // if the user scrolls up, show the navbar
+    // --- UPDATED: Smarter scroll control logic ---
+    const controlNavbar = () => {
+        // If the mobile menu is open, always show the navbar and do nothing else
+        if (isMobileMenuOpen) {
             setShowNav(true);
-          }
-          setLastScrollY(window.scrollY);
+            return;
+        }
+
+        // Check if the user is at the top of the page (e.g., within the first 100px)
+        if (window.scrollY < 100) {
+            setShowNav(true);
+        } else {
+            // If not at the top, only hide the navbar when scrolling down
+            if (window.scrollY > lastScrollY) {
+                setShowNav(false);
+            }
+        }
+        
+        // Update the last scroll position
+        setLastScrollY(window.scrollY);
+    };
+
+    const toggleMobileMenu = () => {
+        setMobileMenuOpen(!isMobileMenuOpen);
     };
 
     useEffect(() => {
-        window.addEventListener('scroll', controlNavbar);
+        if (isMobileMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isMobileMenuOpen]);
 
-        //cleanup function
-        return () =>{
+    useEffect(() => {
+        // Add the event listener when the component mounts
+        window.addEventListener('scroll', controlNavbar);
+        
+        // Return a cleanup function to remove it when the component unmounts
+        return () => {
             window.removeEventListener('scroll', controlNavbar);
         };
-    }, [lastScrollY]);
+    }, [lastScrollY, isMobileMenuOpen]); // Re-run effect if these dependencies change
 
-  return (
-    <header className={`navbar ${!showNav && 'hidden'}`}>
-      <div className="navbar-brand">
-        <img src={logo} alt="UK North African Trust Logo" className="logo" />
-        <h1>UK North African Trust</h1>
-      </div>
-      <nav id="main-nav">
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About Us</Link></li>
-          <li><Link to="/donate">Donations</Link></li>
-          <li><Link to="/volunteer">Volunteer</Link></li>
-          <li><Link to="/contact">Contact Us</Link></li>
-        </ul>
-      </nav>
-      {/* You can keep this for mobile view later */}
-      <div className="mobile-menu-btn">
-        <i className="fas fa-bars"></i>
-      </div>
-    </header>
-  );
+    // The rest of your component remains the same...
+    return (
+        <>
+            <header className={`navbar ${!showNav && 'hidden'}`}>
+                <div className="navbar-brand">
+                    <Link to="/">
+                        <img src={logo} alt="UK North African Trust Logo" className="logo" />
+                        <h1>UK North African Trust</h1>
+                    </Link>
+                </div>
+                <nav id="desktop-nav">
+                    <ul>
+                        <li><Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link></li>
+                        <li><Link to="/about" onClick={() => setMobileMenuOpen(false)}>About Us</Link></li>
+                        <li><Link to="/donate" onClick={() => setMobileMenuOpen(false)}>Donations</Link></li>
+                        <li><Link to="/volunteer" onClick={() => setMobileMenuOpen(false)}>Volunteer</Link></li>
+                        <li><Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link></li>
+                    </ul>
+                </nav>
+                <button className="mobile-menu-btn" onClick={toggleMobileMenu} aria-label="Open menu">
+                    <span className="hamburger-bar"></span>
+                    <span className="hamburger-bar"></span>
+                    <span className="hamburger-bar"></span>
+                </button>
+            </header>
+
+            <nav id="mobile-sidebar" className={isMobileMenuOpen ? 'open' : ''}>
+                 <div className="sidebar-header">
+                    <div className="navbar-brand">
+                         <Link to="/" onClick={toggleMobileMenu}>
+                            <img src={logo} alt="UK North African Trust Logo" className="logo" />
+                            <h2>UK North African Trust</h2>
+                        </Link>
+                    </div>
+                    <button className="close-menu-btn" onClick={toggleMobileMenu} aria-label="Close menu">
+                        &times;
+                    </button>
+                </div>
+                <ul>
+                    <li><Link to="/" onClick={toggleMobileMenu}>Home</Link></li>
+                    <li><Link to="/about" onClick={toggleMobileMenu}>About Us</Link></li>
+                    <li><Link to="/donate" onClick={toggleMobileMenu}>Donations</Link></li>
+                    <li><Link to="/volunteer" onClick={toggleMobileMenu}>Volunteer</Link></li>
+                    <li><Link to="/contact" onClick={toggleMobileMenu}>Contact Us</Link></li>
+                </ul>
+            </nav>
+
+            {isMobileMenuOpen && <div className="overlay" onClick={toggleMobileMenu}></div>}
+        </>
+    );
 }
-
 
 export default Nav;

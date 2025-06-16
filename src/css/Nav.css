@@ -1,58 +1,175 @@
-/* General styling for the header */
+/* =================================== */
+/* General & Desktop Styles            */
+/* =================================== */
 .navbar {
     display: flex;
-    justify-content: space-between; /* This pushes the logo and nav to opposite ends */
-    align-items: center; /* This vertically centers the items */
-    padding: 1rem 2rem; /* Adds some spacing around the navbar */
-    background-color: #ffffff; /* Sets a white background */
-    border-bottom: 1px solid #eaeaea; /* Optional: adds a subtle line at the bottom */
-  }
-  
-  /* Styling for the logo and title container */
-  .navbar-brand {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+
+    /* UPDATED: Use transform for hiding/showing */
+    transform: translateY(0);
+    transition: transform 0.4s ease-in-out; 
+}
+
+/* UPDATED: This now uses transform to guarantee it's fully hidden */
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+.navbar-brand a {
+    text-decoration: none;
+    color: inherit;
     display: flex;
     align-items: center;
-  }
-  
-  /* Making the logo smaller */
-  .logo {
-    width: 60px; /* You can adjust this value to make the logo bigger or smaller */
-    height: auto; /* Maintains the aspect ratio */
-    margin-right: 15px; /* Adds space between the logo and the title */
-  }
-  
-  /* Styling for the site title */
-  .navbar-brand h1 {
-    font-size: 1.25rem; /* Adjust font size as needed */
-    color: #004d00; /* A dark green color to match the logo */
+}
+
+/* ... the rest of your CSS remains the same ... */
+
+.logo {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.navbar-brand h1 {
+    font-size: 1.25rem;
+    color: #004d00;
     margin: 0;
-  }
-  
-  /* Styling for the navigation links */
-  #main-nav ul {
-    list-style: none; /* Removes the default bullet points */
+}
+
+#desktop-nav ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Makes the list items appear in a row */
-  }
-  
-  #main-nav li {
-    margin-left: 20px; /* Adds space between the navigation links */
-  }
-  
-  #main-nav a {
-    text-decoration: none; /* Removes the underline from links */
-    color: #333; /* Sets the text color for the links */
+    display: flex;
+}
+
+#desktop-nav li {
+    margin-left: 20px;
+}
+
+#desktop-nav a {
+    text-decoration: none;
+    color: #333;
     font-weight: 500;
     padding: 5px 0;
     transition: color 0.3s ease;
-  }
-  
-  #main-nav a:hover {
-    color: #004d00; /* Changes the link color on hover */
-  }
-  
-  /* Hide the mobile menu button on larger screens for now */
-  .mobile-menu-btn {
+}
+
+#desktop-nav a:hover {
+    color: var(--primary-color);
+}
+
+.mobile-menu-btn, #mobile-sidebar {
     display: none;
-  }
+}
+
+
+/* ================================= */
+/* Mobile Responsive Styles          */
+/* ================================= */
+@media (max-width: 768px) {
+    /* ... no changes needed in the mobile media query itself ... */
+    .navbar {
+        padding: 0.75rem 1rem;
+    }
+
+    .navbar-brand h1 {
+        display: none;
+    }
+    #desktop-nav {
+        display: none;
+    }
+    .mobile-menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+    .hamburger-bar {
+        width: 100%;
+        height: 3px;
+        background-color: #333;
+        border-radius: 10px;
+    }
+    
+    #mobile-sidebar {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 280px;
+        background-color: #ffffff;
+        z-index: 2000;
+        padding: 1.5rem;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+    #mobile-sidebar.open {
+        transform: translateX(0);
+    }
+    .sidebar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #eaeaea;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+    .sidebar-header .navbar-brand h2 {
+        font-size: 1rem;
+        color: #004d00;
+    }
+    #mobile-sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    #mobile-sidebar a {
+        display: block;
+        padding: 1rem 0;
+        color: #333;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 500;
+        border-bottom: 1px solid #eaeaea;
+    }
+    #mobile-sidebar a:hover {
+        color: var(--primary-color);
+    }
+    
+    .close-menu-btn {
+        background: transparent;
+        border: none;
+        font-size: 2.5rem;
+        line-height: 1;
+        color: #333;
+        cursor: pointer;
+    }
+    .overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1999;
+    }
+}
