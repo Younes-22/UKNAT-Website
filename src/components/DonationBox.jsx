@@ -8,15 +8,15 @@ const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
 function DonationBox() {
   const [donationType, setDonationType] = useState('single');
-  const [amount, setAmount] = useState(10);
+  const [amount, setAmount] = useState(5);
   const [customAmount, setCustomAmount] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
   const impactMessages = {
-    10: '£10 could help us be there for children who feel alone.',
-    20: '£20 could help us provide essential school supplies.',
-    50: '£50 could provide a family with an emergency food parcel.',
+    5: '£5 could help us be there for children who feel alone.',
+    10: '£10 could help us provide essential school supplies.',
+    20: '£20 could provide a family with an emergency food parcel.',
     other: 'Every penny you give helps us make a difference.',
   };
 
@@ -95,9 +95,9 @@ function DonationBox() {
             I am making a <strong>{donationType}</strong> donation of *
           </p>
           <div className="amount-selector">
+            <button type="button" className={amount === 5 ? 'active' : ''} onClick={() => handleAmountClick(5)}>£5</button>
             <button type="button" className={amount === 10 ? 'active' : ''} onClick={() => handleAmountClick(10)}>£10</button>
             <button type="button" className={amount === 20 ? 'active' : ''} onClick={() => handleAmountClick(20)}>£20</button>
-            <button type="button" className={amount === 50 ? 'active' : ''} onClick={() => handleAmountClick(50)}>£50</button>
             <button type="button" className={amount === 'other' ? 'active' : ''} onClick={() => handleAmountClick('other')}>Other</button>
           </div>
           {amount === 'other' && (

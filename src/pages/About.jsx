@@ -34,8 +34,8 @@ function About(){
             <p>A world where every individual has access to basic necessities, education, and opportunities to thrive, regardless of their circumstances or location.</p>
         </div>
     </section>
-    <section class="our-work">
-            <div clasName="container">
+    <section className="our-work">
+            <div className="container">
                 <h2 className="centering">Our Impact</h2>
                 <p className="centering">Here are some of the ways we've made a difference in North African communities.</p>
                 
@@ -44,7 +44,7 @@ function About(){
                         <h3>Ramadan Iftar Aid Campaign</h3>
                         <p>In the blessed month of Ramadan, we successfully raised funds to provide food packages to families in need across Algeria, ensuring they had nutritious meals for their iftar.</p>
                         <div className="video-container">
-                            <video controls playsinline autoplay muted>
+                            <video controls playsInline autoPlay muted>
                                 {/* <source src="images/iftaraidvid.mp4" type="video/mp4"> */}
                                 Your browser does not support the video tag.
                             </video>
