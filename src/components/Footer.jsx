@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import "../css/Footer.css"
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
 
 function Footer(){
@@ -10,11 +10,15 @@ function Footer(){
         <div className="footer-content">
             <div className="footer-section">
                 <h3>UK North African Trust</h3>
-                <p>Making a difference, one life at a time.</p>
+                <p>Making a difference, one step at a time.</p>
                 <div className="social-icons">
                     <a href="https://www.instagram.com/northafricantrust?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
                     <FaInstagram />
                     </a>
+                    <a href="https://www.linkedin.com/company/uk-north-african-trust/" target='_blank' rel='noopener noreferrer'>
+                    <FaLinkedin />
+                    </a>
+                    
                     </div>
             </div>
             <div className="footer-section">

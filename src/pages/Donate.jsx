@@ -23,13 +23,11 @@ export default function DonationPage() {
                 <FontAwesomeIcon icon={faHandHoldingUsd} />
                 <h3>One-Time Donation</h3>
                 <p>Make an immediate impact with a one-time contribution to support our ongoing projects.</p>
-                <a href="#donation-form" className="btn">Donate Now</a>
             </div>
             <div className="option-box">
                 <FontAwesomeIcon icon={faSyncAlt} />
                 <h3>Monthly Giving</h3>
                 <p>Become a sustaining supporter by setting up a recurring monthly donation to provide consistent help.</p>
-                <a href="#donation-form" className="btn">Become a Monthly Donor</a>
             </div>
         </div>
         </section>
@@ -38,10 +36,10 @@ export default function DonationPage() {
         <DonationSelector />
       </main>
 
-      <footer className="mt-10 text-center text-sm text-gray-400">
+      <div className="donation-container">
         <p>Thank you for your support.</p>
         <p>All payments are processed securely by Stripe.</p>
-      </footer>
+      </div>
     </div>
   );
 }

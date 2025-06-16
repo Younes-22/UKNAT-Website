@@ -1,5 +1,5 @@
 import { faPhone, faEnvelope, faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faWhatsapp, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import "../css/Contact.css";
@@ -43,14 +43,14 @@ function Contact(){
                 <FontAwesomeIcon icon={faPhone} className='info-icon' />
                 <div>
                     <h4>Phone</h4>
-                    <p><a href="tel:07555111250">07555111250</a></p>
+                    <p>07555111250</p>
                 </div>
             </div>
             <div className="info-item">
                 <FontAwesomeIcon icon={faEnvelope} className='info-icon' />
                 <div>
                     <h4>Email</h4>
-                    <p><a href="mailto:uknorthafricantrust@gmail.com">uknorthafricantrust@gmail.com</a></p>
+                    <p>uknorthafricantrust@gmail.com</p>
                 </div>
             </div>
             <div className="social-media">
@@ -59,6 +59,9 @@ function Contact(){
                     <a href="https://www.instagram.com/northafricantrust?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel='noopener noreferrer'>
                     <FontAwesomeIcon icon={faInstagram} size="2x" />
                     </a>
+                    <a href="https://www.linkedin.com/company/uk-north-african-trust/" target='_blank' rel='noopener noreferrer'>
+                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                    </a>                    
                 </div>
             </div>
         </div>
