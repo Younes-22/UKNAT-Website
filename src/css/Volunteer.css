@@ -114,4 +114,20 @@
         margin: 0 auto 40px;
     }
 }
+.h2-size{
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.h3-size{
+    font-size: 1.7rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.p-size{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
 

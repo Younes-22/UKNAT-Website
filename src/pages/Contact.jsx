@@ -14,7 +14,7 @@ function Contact(){
         },
         {
         question: "How can my company partner with The UK North African Trust?",
-        answer: "We offer various corporate partnership opportunities, including sponsorships, cause marketing, and employee engagement programs. Please contact us at partnerships@hopefoundation.org to discuss possibilities."
+        answer: "We offer various corporate partnership opportunities, including sponsorships, cause marketing, and employee engagement programs. Please contact us at uknorthafricantrust@gmail.com to discuss possibilities."
         }
     ];
 
@@ -34,8 +34,8 @@ function Contact(){
         </div>
     </section>
     <section className="contact-intro">
-        <h1>Get in Touch</h1>
-        <p>We'd love to hear from you! Whether you have questions about our work, want to volunteer, or need information about donations, our team is here to help.</p>
+        <h1 className='h1-size'>Get in Touch</h1>
+        <p className='p-size'>We'd love to hear from you! Whether you have questions about our work, want to volunteer, or need information about donations, our team is here to help.</p>
     </section>
     <section className="contact-container">
         <div className="contact-info">

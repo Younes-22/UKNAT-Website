@@ -14,11 +14,10 @@ function Home(){
             <h1 className="centering">Welcome to the UK North African Trust Website</h1>
             < MessageBox />
             </div>
-        <section class="hero">
-            <div class="hero-content">
+        <section className="hero">
+            <div className="hero-content">
             <h2>SERVING NORTH AFRICAN COMMUNITIES AND BEYOND</h2>
             <p>UK North African Trust supports sustainable development and cultural vitality through cultural, educational, and social activities. We empower the North African community and beyond in the UK through learning, celebration, and impactful charity projects.</p>
-            {/* <li><Link to='/donate' className="btn">Support our causes</Link></li> */}
             </div>
         </section>
         <section className="featured-initiatives">

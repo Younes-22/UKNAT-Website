@@ -3,15 +3,24 @@ import { faHandHoldingUsd, faSyncAlt } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import DonationSelector from '../components/DonationSelector';
 import '../css/Donate.css';
+import donateimg from '../images/donateimg.png';
 
 export default function DonationPage() {
   return (
+    <>
+    <section className="page-banner">
+            <img src={donateimg} alt="banner image" className="banner-image" />
+        <div className="banner-overlay">
+            <h2>Donate</h2>
+        </div>
+    </section>
+    <br />
     <div className="centering">
       <header className="text-center mb-10">
         <h1 className="centering">
           Make a Difference Today
         </h1>
-        <p className="centering">
+        <p className="p-size">
           Your generous contribution powers our mission and helps us create positive change.
           Every donation, no matter the size, has a real impact.
         </p>
@@ -41,5 +50,6 @@ export default function DonationPage() {
         <p>All payments are processed securely by Stripe.</p>
       </div>
     </div>
+    </>
   );
 }

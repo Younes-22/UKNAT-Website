@@ -1,26 +1,23 @@
-/* =================================== */
-/* General & Desktop Styles            */
-/* =================================== */
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #ffffff;
-    border-bottom: 1px solid #eaeaea;
+    background-color: white;
+    border-bottom: 2px solid #00000030;
     position: sticky;
     top: 0;
-    left: 0;
+    left: 0px;
+    right: 0;
     width: 100%;
     z-index: 1000;
     box-sizing: border-box;
 
-    /* UPDATED: Use transform for hiding/showing */
     transform: translateY(0);
     transition: transform 0.4s ease-in-out; 
 }
 
-/* UPDATED: This now uses transform to guarantee it's fully hidden */
 .navbar.hidden {
     transform: translateY(-100%);
 }
@@ -32,7 +29,6 @@
     align-items: center;
 }
 
-/* ... the rest of your CSS remains the same ... */
 
 .logo {
     width: 60px;
@@ -54,10 +50,11 @@
 }
 
 #desktop-nav li {
-    margin-left: 20px;
+    margin-left: 50px;
 }
 
 #desktop-nav a {
+    font-size: 1.4rem;
     text-decoration: none;
     color: #333;
     font-weight: 500;
@@ -74,11 +71,9 @@
 }
 
 
-/* ================================= */
-/* Mobile Responsive Styles          */
-/* ================================= */
+
+/* on mobile phones */
 @media (max-width: 768px) {
-    /* ... no changes needed in the mobile media query itself ... */
     .navbar {
         padding: 0.75rem 1rem;
     }
@@ -146,7 +141,7 @@
         padding: 1rem 0;
         color: #333;
         text-decoration: none;
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         font-weight: 500;
         border-bottom: 1px solid #eaeaea;
     }

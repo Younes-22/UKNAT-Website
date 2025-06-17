@@ -17,11 +17,11 @@ function About(){
     </section>
     <section className="about-intro">
         <div className="centering">
-            <h1>Our Story</h1>
-            <h3>The UK North African Trust is a charitable organization founded in 2016 to support and empower the North African community and beyond in the UK. The Trust organizes a wide range of cultural, religious, educational, and charitable events and activities, fostering unity and personal development. 
-                It extends its impact by supporting charitable causes both in the UK and North Africa, addressing key social needs. With a strong focus on youth engagement, the Trust provides young people with opportunities through cultural, educational, entertainment, and sports activities, helping them thrive in society.</h3>
-            <h3>Additionally, the Trust is committed to environmental protection and promoting a healthy lifestyle, 
-                contributing to a sustainable future for all. Through its diverse initiatives, the UK North African Trust continues to make a meaningful difference in the lives of individuals and communities.</h3>
+            <h1 className='h1-size'>Our Story</h1>
+            <p className='p-size'>The UK North African Trust is a charitable organisation founded in 2016 to support and empower the North African community and beyond in the UK. The Trust organises a wide range of cultural, religious, educational, and charitable events and activities, fostering unity and personal development. 
+                It extends its impact by supporting charitable causes both in the UK and North Africa, addressing key social needs. With a strong focus on youth engagement, the Trust provides young people with opportunities through cultural, educational, entertainment, and sports activities, helping them thrive in society.</p>
+            <p className='p-size'>Additionally, the trust is committed to environmental protection and promoting a healthy lifestyle, 
+                contributing to a sustainable future for all. Through its diverse initiatives, the UK North African Trust continues to make a meaningful difference in the lives of individuals and communities.</p>
         </div>
     </section>
 
@@ -53,8 +53,8 @@ function About(){
                             </video>
                         </div>
                         <div className='video-container'>
-                            <h3>Blood Donation Equipment Aid</h3>
-                            <p>we provided blood donation equipment like medical beds</p>
+                            <h3>Blood Donation Equipment Support</h3>
+                            <p>We supplied essential equipment, including medical beds, to facilitate safe and effective blood donation services.</p>
                             <video controls playsInline autoPlay muted>
                                 { <source src={equipmentvid} type="video/mp4" /> }
                                 Your browser does not support the video tag.

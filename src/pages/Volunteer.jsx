@@ -1,6 +1,6 @@
 import volunteerimg from "../images/volunteerpic2.jpeg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHandsHelping, faChalkboardTeacher, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
+import { faHandsHelping, faChalkboardTeacher, faLaptopCode, faHandHoldingUsd} from '@fortawesome/free-solid-svg-icons';
 import "../css/Volunteer.css";
 import React, { useState } from 'react';
 
@@ -84,30 +84,33 @@ function Volunteer(){
     </section>
     <section className="volunteer-intro text-center">
         <div className="centering">
-            <h2>Make a Difference</h2>
-            <p>Volunteering with UK North African Trust is a rewarding experience that allows you to make a real difference in the lives of those in need. Based in London, our volunteers are the backbone of our organization, helping us deliver vital services and support to communities across North Africa.</p>
-            <p>Whether you have specific skills to offer or simply want to donate your time, we have opportunities for everyone. Join our team of dedicated volunteers today!</p>
+            <h2 className="h2-size">Make a Difference</h2>
+            <p className="p-size">Volunteering with UK North African Trust is a rewarding experience that allows you to make a real difference in the lives of those in need. Based in London, our volunteers are the backbone of our organization, helping us deliver vital services and support to communities across North Africa.</p>
+            <p className="p-size">Whether you have specific skills to offer or simply want to donate your time, we have opportunities for everyone. Join our team of dedicated volunteers today!</p>
         </div>
     </section>
     <section className="centering">
-      <h2>Volunteer Opportunities</h2>
+      <h3 className="h2-size">Volunteer Opportunities</h3>
       <div>
         <div className="opportunity-box text-center">
           <FontAwesomeIcon icon={faHandsHelping} />
-          <h3>Event Support</h3>
-          <p>Help organize and run fundraising events in London and across the UK.</p>
+          <h3 className="h3-size">Event Support</h3>
+          <p className="p-size">Help organize and run fundraising events in London and across the UK.</p>
         </div>
         <div className="opportunity-box text-center">
-          {/* And replace this <i> tag */}
           <FontAwesomeIcon icon={faChalkboardTeacher} />
-          <h3>Skills Training</h3>
-          <p>Share your professional skills with our team or beneficiaries.</p>
+          <h3 className="h3-size">Skills Training</h3>
+          <p className="p-size">Share your professional skills with our team or beneficiaries.</p>
         </div>
         <div className="opportunity-box text-center">
-          {/* And this one too */}
           <FontAwesomeIcon icon={faLaptopCode} />
-          <h3>Digital Support</h3>
-          <p>Help with our website, social media, or digital marketing efforts.</p>
+          <h3 className="h3-size">Digital Support</h3>
+          <p className="p-size">Help with our website, social media, or digital marketing efforts.</p>
+        </div>
+        <div className="opportunity-box text-center">
+          <FontAwesomeIcon icon={faHandHoldingUsd} />
+          <h3 className="h3-size">Fundraising</h3>
+          <p className="p-size">Support our fundraising efforts to advance and sustain our charitable initiatives.</p>
         </div>
       </div>
 

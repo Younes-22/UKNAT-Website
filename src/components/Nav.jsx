@@ -54,9 +54,8 @@ function Nav() {
         return () => {
             window.removeEventListener('scroll', controlNavbar);
         };
-    }, [lastScrollY, isMobileMenuOpen]); // Re-run effect if these dependencies change
+    }, [lastScrollY, isMobileMenuOpen]); 
 
-    // The rest of your component remains the same...
     return (
         <>
             <header className={`navbar ${!showNav && 'hidden'}`}>
