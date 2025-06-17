@@ -38,7 +38,7 @@ footer {
 }
 
 .footer-section ul li a:hover {
-    color: var(--primary-color);
+    color: grey;
 }
 
 .social-icons {
