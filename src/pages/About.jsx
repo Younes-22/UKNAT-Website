@@ -3,6 +3,8 @@ import bannerimg from "../images/uknatbannerh.jpeg";
 import "../css/About.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBullseye, faEye } from '@fortawesome/free-solid-svg-icons';
+import iftarvid from "../images/iftaraidvid.mp4"; 
+import equipmentvid from "../images/medequipment-vid.mp4"; 
 
 function About(){
     return(
@@ -46,7 +48,15 @@ function About(){
                         <p>In the blessed month of Ramadan, we successfully raised funds to provide food packages to families in need across Algeria, ensuring they had nutritious meals for their iftar.</p>
                         <div className="video-container">
                             <video controls playsInline autoPlay muted>
-                                {/* <source src="images/iftaraidvid.mp4" type="video/mp4"> */}
+                                { <source src={iftarvid} type="video/mp4" /> }
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div className='video-container'>
+                            <h3>Blood Donation Equipment Aid</h3>
+                            <p>we provided blood donation equipment like medical beds</p>
+                            <video controls playsInline autoPlay muted>
+                                { <source src={equipmentvid} type="video/mp4" /> }
                                 Your browser does not support the video tag.
                             </video>
                         </div>
