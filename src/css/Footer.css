@@ -1,31 +1,26 @@
 /* Footer Styles */
 footer {
-    background-color: #333; /* Using a slightly darker grey for better contrast */
+    background-color: #004d00;
     color: #fff;
-    padding: 50px 0 20px; /* Adjust padding to be vertical only */
-
-    /* --- ADD THESE LINES FOR THE CSS-ONLY FIX --- */
-    width: 100vw; /* Force the width to 100% of the viewport width */
+    padding: 50px 0 20px;
+    width: 100vw;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    /* --- END OF ADDED LINES --- */
 }
 
 .footer-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* This var(--max-width) keeps your *content* nicely centered inside the full-width footer */
-    max-width: var(--max-width, 1200px); /* Added a fallback value */
+    max-width: var(--max-width, 1200px);
     margin: 0 auto;
-    padding: 0 20px; /* Add padding here to affect the content, not the footer edge */
+    padding: 0 20px;
 }
 
 .footer-section {
     flex: 1 1 300px;
     margin-bottom: 30px;
-    /* Removed padding from here as it's now on .footer-content */
 }
 
 .footer-section h3 {
@@ -51,14 +46,14 @@ footer {
 }
 
 .social-icons a {
-    color: #fff;
     margin-right: 15px;
     font-size: 1.5rem;
     transition: color 0.3s ease;
+    color: #fff; 
 }
 
-.social-icons a:hover {
-    color: var(--primary-color);
+footer .social-icons a svg {
+    color: #fff;
 }
 
 .footer-bottom {

@@ -114,7 +114,6 @@ function Volunteer(){
     </section>
         <section className="centering"> 
       <h2>Register Your Interest</h2>
-      <p>...</p>
       
       <form id="volunteer-registration-form" className="narrow-form" onSubmit={handleSubmit}>
         <div className="form-group">
@@ -150,9 +149,9 @@ function Volunteer(){
         <div className="form-group">
             <label htmlFor="availability">Availability</label>
             <select name="availability" id="availability" value={formData.availability || ''} onChange={handleChange}>
-                <option value="weekdays">Weekdays</option>
-                <option value="weekends">Weekends</option>
-                <option value="flexible">Flexible</option>
+                <option value="Weekdays">Weekdays</option>
+                <option value="Weekends">Weekends</option>
+                <option value="Flexible">Flexible</option>
             </select>
         </div>
         <div className="form-group">
@@ -181,8 +180,8 @@ function Volunteer(){
             value={formData.message} onChange={handleChange}
             ></textarea>
         </div>
-        <div className="form-group">
-            <button type="submit" className="btn" disabled={isSubmitting}>
+        <div className="submit-button">
+            <button type="submit" className="submit-button" disabled={isSubmitting}>
                 {isSubmitting ? 'Submitting...' : 'Submit Application'}
               </button>
             </div>

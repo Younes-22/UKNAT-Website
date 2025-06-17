@@ -11,6 +11,20 @@ function Footer(){
             <div className="footer-section">
                 <h3>UK North African Trust</h3>
                 <p>Making a difference, one step at a time.</p>
+            </div>
+            <div className="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/about'>About Us</Link></li>
+                    <li><Link to='/donate'>Donate</Link></li>
+                    <li><Link to='/volunteer'>Volunteer</Link></li>
+                    <li><Link to='/contact'>Contact Us</Link></li>
+                </ul>
+            </div>
+            <div className="footer-section">
+                <h3>Contact Info</h3>
+                <p><i className="fas fa-envelope"></i> uknorthafricantrust@gmail.com</p>
                 <div className="social-icons">
                     <a href="https://www.instagram.com/northafricantrust?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
                     <FaInstagram />
@@ -19,22 +33,7 @@ function Footer(){
                     <FaLinkedin />
                     </a>
                     
-                    </div>
-            </div>
-            <div className="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/about'>About</Link></li>
-                    <li><Link to='/donate'>Donate</Link></li>
-                    <li><Link to='/contact'>Contact Us</Link></li>
-                    <li><Link to='/'>Home</Link></li>
-                </ul>
-            </div>
-            <div className="footer-section">
-                <h3>Contact Info</h3>
-                <p><i className="fas fa-phone"></i> (123) 456-7890</p>
-                <p><i className="fas fa-envelope"></i> uknorthafricantrust@gmail.com</p>
+                </div>
             </div>
         </div>
         <div className="footer-bottom">

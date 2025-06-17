@@ -3,6 +3,7 @@ import { faInstagram, faWhatsapp, faLinkedin} from '@fortawesome/free-brands-svg
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import "../css/Contact.css";
+import contactimg from "../images/contactus.png";
 
 function Contact(){
     
@@ -12,7 +13,7 @@ function Contact(){
             answer: "You can volunteer by filling out our volunteer application form on this page or by emailing us."
         },
         {
-        question: "How can my company partner with Hope Foundation?",
+        question: "How can my company partner with The UK North African Trust?",
         answer: "We offer various corporate partnership opportunities, including sponsorships, cause marketing, and employee engagement programs. Please contact us at partnerships@hopefoundation.org to discuss possibilities."
         }
     ];
@@ -26,27 +27,20 @@ function Contact(){
     
     return(
         <>
-            <section className="page-banner">
-        {/* <img src="images/donation.jpg" alt="Donate to UKNAT" class="banner-image"> */}
+        <section className="page-banner">
+                <img src={contactimg} alt="contact image" className="banner-image" />
         <div className="banner-overlay">
             <h2>Contact Us</h2>
         </div>
     </section>
-    <section className="centering">
-        <h2>Get in Touch</h2>
+    <section className="contact-intro">
+        <h1>Get in Touch</h1>
         <p>We'd love to hear from you! Whether you have questions about our work, want to volunteer, or need information about donations, our team is here to help.</p>
     </section>
     <section className="contact-container">
         <div className="contact-info">
             <h3>Contact Information</h3>
-            <div className="info-item">
-                <FontAwesomeIcon icon={faPhone} className='info-icon' />
-                <div>
-                    <h4>Phone</h4>
-                    <p>07555111250</p>
-                </div>
-            </div>
-            <div className="info-item">
+            <div>
                 <FontAwesomeIcon icon={faEnvelope} className='info-icon' />
                 <div>
                     <h4>Email</h4>
@@ -55,7 +49,7 @@ function Contact(){
             </div>
             <div className="social-media">
                 <h3>Connect With Us</h3>
-                <div className="social-icons">
+                <div className="socialm-icons">
                     <a href="https://www.instagram.com/northafricantrust?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel='noopener noreferrer'>
                     <FontAwesomeIcon icon={faInstagram} size="2x" />
                     </a>
