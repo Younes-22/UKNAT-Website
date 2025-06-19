@@ -14,7 +14,7 @@ function Contact(){
         },
         {
         question: "How can my company partner with The UK North African Trust?",
-        answer: "We offer various corporate partnership opportunities, including sponsorships, cause marketing, and employee engagement programs. Please contact us at uknorthafricantrust@gmail.com to discuss possibilities."
+        answer: "We offer various corporate partnership opportunities, including sponsorships, cause marketing, and employee engagement programs. Please contact us at uknorthafricantrust@gmail.com or through our social media accounts to discuss possibilities."
         }
     ];
 

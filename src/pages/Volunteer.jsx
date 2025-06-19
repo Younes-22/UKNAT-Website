@@ -45,7 +45,7 @@ function Volunteer(){
             // console.log("submitted the following data: ", formData);
             setIsSubmitting(true);
 
-            const url = 'https://sheetdb.io/api/v1/idxxty0qg47kt';
+            const url = '/api/submit-form';
 
             fetch(url, {
               method: 'POST',

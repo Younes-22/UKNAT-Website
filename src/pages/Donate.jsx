@@ -25,7 +25,7 @@ export default function DonationPage() {
           Every donation, no matter the size, has a real impact.
         </p>
       </header>
-              <section className="donation-options">
+        <section className="donation-options">
         <h2 className="centering">Ways to Give</h2>
         <div className="options-container">
             <div className="option-box">
