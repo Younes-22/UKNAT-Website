@@ -3,10 +3,12 @@ import bannerimg from "../images/uknatbannerh.jpeg";
 import "../css/About.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBullseye, faEye } from '@fortawesome/free-solid-svg-icons';
-import iftarvid from "../images/iftaraidvid.mp4"; 
+import iftarvid from "../images/foodAidVid.mp4"; 
 import equipmentvid from "../images/medequipment-vid.mp4"; 
 
 function About(){
+
+
     return(
         <>
         <section className="page-banner">

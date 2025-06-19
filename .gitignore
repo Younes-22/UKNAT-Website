@@ -27,5 +27,5 @@ dist-ssr
 echo "*.mp4" >> .gitignore
 .env
 
-src/images/iftaraidvid.mp4
-src/images/medequipment-vid.mp4
+# src/images/iftaraidvid.mp4
+# src/images/medequipment-vid.mp4
