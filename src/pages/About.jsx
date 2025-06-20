@@ -42,7 +42,7 @@ function About(){
     <section className="our-work">
             <div className="container">
                 <h2 className="centering">Our Impact</h2>
-                <p className="centering">Here are some of the ways we've made a difference in North African communities.</p>
+                <p className="centering">Here are some of the ways we've made a difference in our communities.</p>
                 
                 <div className="work-showcase">
                     <div className="centering">
