@@ -17,8 +17,10 @@ function Volunteer() {
             <section className="volunteer-intro text-center">
                 <div className="centering">
                     <h2 className="h2-size">Make a Difference</h2>
-                    <p className="p-size">Volunteering with UK North African Trust is a rewarding experience...</p>
-                    <p className="p-size">Whether you have specific skills to offer or simply want to donate your time...</p>
+                    <p className="p-size">Volunteering with UK North African Trust offers a meaningful way to make a real difference.
+                      Whether you bring specific skills or simply the willingness to give your time, your contribution can help support vital projects and strengthen 
+                      our community.</p>
+                    <p className="p-size">If you're able to volunteer, we’d love to hear from you.</p>
                 </div>
             </section>
             <section className="centering">
@@ -27,22 +29,22 @@ function Volunteer() {
                     <div className="opportunity-box text-center">
                         <FontAwesomeIcon icon={faHandsHelping} />
                         <h3 className="h3-size">Event Support</h3>
-                        <p className="p-size">Help organize and run fundraising events...</p>
+                        <p className="p-size">Help organise and run fundraising events.</p>
                     </div>
                     <div className="opportunity-box text-center">
                         <FontAwesomeIcon icon={faChalkboardTeacher} />
                         <h3 className="h3-size">Skills Training</h3>
-                        <p className="p-size">Share your professional skills...</p>
+                        <p className="p-size">Share your professional skills.</p>
                     </div>
                     <div className="opportunity-box text-center">
                         <FontAwesomeIcon icon={faLaptopCode} />
                         <h3 className="h3-size">Digital Support</h3>
-                        <p className="p-size">Help with our website, social media...</p>
+                        <p className="p-size">Help with our website, social media.</p>
                     </div>
                     <div className="opportunity-box text-center">
                         <FontAwesomeIcon icon={faHandHoldingUsd} />
                         <h3 className="h3-size">Fundraising</h3>
-                        <p className="p-size">Support our fundraising efforts...</p>
+                        <p className="p-size">Support our fundraising efforts.</p>
                     </div>
                 </div>
             </section>
