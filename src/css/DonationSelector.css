@@ -114,7 +114,7 @@
 /* --- Responsive Design for Smaller Screens --- */
 @media (max-width: 768px) {
   .amount-selector {
-    /* Creates a neat 2x2 grid on mobile when 4 buttons are present */
-    grid-template-columns: 1fr 1fr;
+    /* Each button will now take the full width, stacking them vertically. */
+    grid-template-columns: 1fr;
   }
 }
